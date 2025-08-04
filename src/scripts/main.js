@@ -26,6 +26,9 @@ const renderer = new THREE.WebGLRenderer({
 	canvas: container
 })
 renderer.setPixelRatio( 5);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.gammaFactor = 2.2;
+renderer.gammaOutput = true;
 function resizeRendererToDisplaySize(renderer) {
   const canvas = renderer.domElement;
   const width = canvas.clientWidth;
@@ -75,7 +78,7 @@ function resizeRendererToDisplaySize(renderer) {
 const fov = 50;
 const aspect = 2; // the canvas default
 const near = 0.1;
-const far = 10;
+const far = 30;
 const camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
 // const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -96,14 +99,14 @@ const scene = new THREE.Scene();
 // --------------------composer------------------------------
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
-composer.addPass(new EffectPass(camera, new BloomEffect()));
+//composer.addPass(new EffectPass(camera, new BloomEffect()));
 
 
 
-// --------------------light------------------------------
+// --------------------light not working------------------------------
 
 	const color = 0xFFFFFF;
-	const intensity = 10;
+	const intensity = 0;
 	const light = new THREE.DirectionalLight( color, intensity );
 	light.position.set( - 1, 2, 4 );
 	scene.add( light );
@@ -118,7 +121,7 @@ const material =  THREE.MeshLambertMaterial;
 //     if (o.isMesh) o.material = material;
 //   });
 // }
-loader.load( '/predator/myhuman2.glb', function ( gltf ) {
+loader.load( '/predator/chr2goomerged3.glb', function ( gltf ) {
   const model = gltf.scene;
 
 //   gltf.scene.traverse((o) => {
@@ -128,12 +131,15 @@ loader.load( '/predator/myhuman2.glb', function ( gltf ) {
 //      }
 //   });
   scene.add( model );
-
 }, undefined, function ( error ) {
 
   console.error( error );
 
 } );
+
+
+
+//const ambientLight = new THREE.AmbientLight(0xffffff, 3);
 
 // const geometry = new THREE.BoxGeometry( boxWidth, boxHeight, boxDepth );
 
