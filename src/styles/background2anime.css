@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+@import "@styles/theme.css";
+/* @theme {
+  --color-orange-300: oklch(83.7% 0.128 66.29); https://oklch.com/#0.3323,0.0685,271.34,100
+} */
+
+html {
+    background-color: var(--color-mybg);
+    /* background-image:linear-gradient(rgb(16, 35, 59), rgb(140, 158, 170)); */
+    /* background-position: top; */
+    /* background-attachment: fixed; */
+    background-image: url("/predator/vtuberewrbung.png");
+    /* background-repeat: no-repeat; */
+    
+    background-attachment: fixed;
+    /* background-size: cover; */
+    max-height:4320px;
+    background-position: center;
+    /* height:100%; */
+    /* background-size: 150px 150px; */
+    font-family: sans-serif;
+  }
+
+  @media screen and (min-width: 1024px) {
+    html {
+    background-size: cover;
+    background-repeat: repeat-y; 
+  }
+}

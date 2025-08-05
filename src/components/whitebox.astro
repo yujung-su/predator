@@ -1,25 +1,28 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-import "@styles/background1.css";
+// import "@styles/background1.css";
 interface Props {
    imagePath: string;
+   hreflink: string;
    t1: string;
    t2: string;
    t3: string;
    t4: string;
 }
-const { imagePath, t1, t2, t3, t4} = Astro.props;
+const { imagePath,hreflink, t1, t2, t3, t4} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "/predator/src/images/*.{jpeg,jpg,png,gif}"`);
 ---
 <div class="overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-2xl mt-6 mb-8 bg-white 2xl:col-span-1">
   <div class="md:flex">
     <div class="md:shrink-0 flex justify-center">
-      <Image src={images[imagePath]()} alt="ladvanced" class="size-[350px] object-cover" title="me"/>
+      <Image src={images[imagePath]()} alt="ladvanced" class="size-[300px] object-cover" title="me"/>
     </div>
     <div class="p-8">
-      <div class="text-l 2xl:text-2xl font-semibold text-(--color-mytext2) tracking-wide uppercase ">{t1}</div>
+      <div class="text-l 2xl:text-2xl font-semibold text-(--color-mytext2) tracking-wide uppercase ">
+        <a href={hreflink}>{t1}</a>
+      </div>
       <h1 class="text-(--color-mytext2) mt-1 block 2xl:text-xl"> 
         <!-- indent-8 indent-16-->
         {t2}

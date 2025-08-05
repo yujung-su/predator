@@ -1,17 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import "@styles/background2anime.css";
 const pageTitle = "Vtuber & Anime";
 import Whitebox from '@components/whitebox.astro';
-import Textbox from '@components/Textbox.astro';
-
+import Textbox2 from '@components/Textbox2.astro';
+// import Threejs from '@components/Threejs.astro';
+import Whiteboxvideo from '@components/whitebox-video.astro';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<Textbox t1={'Vtuber 皮 製作'} t2={'I love to draw cute anime girls! I also design vtube models and simple rigging for cheap! Pictures and videos here.我會畫簡單的動漫人物和Chibi卡通人物，也會畫Vtuber與基本Live2D rigging。歡迎與我合作!'}/>
+	<Textbox2 t1={'Vtuber 皮 製作'} t2={'I love to draw cute anime girls! I also design vtube models and simple rigging for cheap! Pictures and videos here.我會畫簡單的動漫人物和Chibi卡通人物，也會畫Vtuber與基本Live2D rigging。歡迎與我合作!'}/>
 	
-	<Whitebox imagePath="/src/images/girl2-demo.png" t1={'Vtube 人物設計'} t3={'基本款角色(有分圖層):價錢3000 NTD。Live2D 模組3000 NTD。也做動物角色。進階款 - Vroid Vseeface Vbridger :暫無提供(本人還在努力學習)。'}/>
+	<Whitebox imagePath="/src/images/girl2-demo.png" t1={'Vtube 人物設計'} t3={'基本款角色(有分圖層):價錢3000 NTD。Live2D 模組3000 NTD。也做動物角色。 Vseeface Vbridger :暫無提供(本人還在努力學習)。'}/>
 
 	<Whitebox imagePath="/src/images/2023-26-3.png" t1={'動漫人物設計'} t3={'依客戶需求風格繪製'}/>
+
+    <Whiteboxvideo videoPath="/predator/anim3.mp4" t1={'3D 角色建模'} t3={'目前只提供 Blender 模組。 進階款 - Vroid \ Warudo 暫無提供(本人還在努力學習)'}/>
+
 	<p>Vtuber demonstration reel</p>
 	<div class="overflow-hidden">
 		<iframe class="aspect-video md:min-w-[720px] md:max-w-2xl mt-12 mb-8 min-w-[480px]"

@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "CG & VFX";
+const pageTitle = "VFX - 特效";
 import Whitebox from '@components/whitebox.astro';
 import Whiteboxvideo from '@components/whitebox-video.astro';
-import Textbox from '@components/Textbox.astro';
+import Textbox2 from '@components/Textbox2.astro';
 import { Image } from 'astro:assets';
 import mushroom from 'src/images/mushroomstatic3-small.png';
 import watch from 'src/images/watch4-scene1bright.0016.png';
-import cells1 from 'src/images/newlook.png';
+// import cells1 from 'src/images/newlook.png';
 import patticle1 from 'src/images/smolesingle.png';
 import skull from 'src/images/render3.png';
 import fractal from 'src/images/highres.png';
@@ -15,19 +15,19 @@ import blackhole from 'src/images/bh2.png';
 import vtuberr from 'src/images/girl2-beforesplit.png';
 import anime1 from 'src/images/2023-26-3.png';
 import anime2 from 'src/images/2023-1.png';
-
+import "@styles/background3cg.css";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <Textbox t1={'CG & 特效'} t2={'I am a beginner VFX artist and concept artist. I also do simple animations like product animations in TV and youtube. I make simple VFX effects for games and movies.I am using Blender and Hudini. There are still a lot to learn! But I am having fun!'}/>
-	<p>VFX demonstration reel</p>
+  <Textbox2 t1={'VFX - 特效'} t2={'I am aiming to become a VFX generalist. I also do simple animations like product animations in TV and youtube, as well as some VFX effects for games and movies.Blender and Hudini is my main tool but I am also learning Nuke, Maya, Substance Painter and Mari.'}/>
+	<!-- <p>VFX demonstration reel</p> -->
 	<div class="overflow-hidden">
 		<iframe class="aspect-video md:min-w-[720px] md:max-w-2xl mt-12 mb-8 min-w-[480px]"
 		src="https://www.youtube.com/embed/XBnR3dDVpBg">
 		</iframe>
   </div>
 
-	<Whitebox imagePath="/src/images/watch4-scene1bright.0016.png" t1={'產品廣告圖 / 動畫'
+	<Whitebox imagePath="/src/images/watch4-scene1bright.0016.png" hreflink="https://www.youtube.com/watch?v=yU6BictzQsg" t1={'產品廣告圖 / 動畫'
 }/>
 	<Whitebox imagePath="/src/images/landscape-render3-cut.png" t1={'場景設計、3D建模'
 }/>
@@ -104,9 +104,24 @@ import anime2 from 'src/images/2023-1.png';
       <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
     </td>
     <td class="text-center w-30">
-      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
+      <img src="/predator/check-rr.png" alt="icon" class="size-[20px] timg"/>
     </td>
     <td></td>
+  </tr>
+  <tr>
+    <td style="border-bottom:3px solid black" colspan="100%"></td>
+  </tr>
+  <tr>
+    <td class="text-center">Nuke</td>
+    <td class="text-center w-30">
+      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-center">UE5</td>
+    <td class="text-center w-30">
+      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
+    </td>
   </tr>
 </table>
 </div>
@@ -120,7 +135,7 @@ import anime2 from 'src/images/2023-1.png';
   <div class="columns-3 gap-4 mt-4">
     <Image class="rounded-lg mt-2 mb-2" src={mushroom} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={watch} alt="A bird sitting on a nest of eggs." />
-    <Image class="rounded-lg mt-2 mb-2" src={cells1} alt="A bird sitting on a nest of eggs." />
+    <!-- <Image class="rounded-lg mt-2 mb-2" src={cells1} alt="A bird sitting on a nest of eggs." /> -->
     <Image class="rounded-lg mt-2 mb-2" src={patticle1} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={skull} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={fractal} alt="A bird sitting on a nest of eggs." />

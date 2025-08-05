@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Threejs from '@components/Threejs.astro';
+import "@styles/background1cg.css";
+// import Threejs from '@components/Threejs.astro';
 import Textbox from '@components/Textbox.astro';
 import EXPERIENCE from '@components/Experience.astro';
 import Card1 from '@components/Card1.astro';
@@ -28,11 +29,10 @@ const pageTitle = "Predator - Home Page";
 ---
 <!-- pageTitle={pageTitle} -->
 <BaseLayout >
-	<Threejs />
+	<!-- <Threejs /> -->
    <div class="inline-block">
     <Textbox t2={'歡迎來到我的個人網頁兼工作室網頁'}/>
-      <h1>關於我</h1>
-    <Whitebox imagePath="/src/images/me.png" t2={'蘇昱融'} t3={'瘋狂學習，無限創意，終其一生，永不後悔'} t4={'然後我喜歡獰貓 Caracal Cat'}/>
+    <Whitebox imagePath="/src/images/me.png" t2={'蘇昱融'} t3={'喜歡創作和吸貓'}/>
     <!-- t1={'創辦人'}  -->
   </div>
   <div class="inline-block">

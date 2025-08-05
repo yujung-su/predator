@@ -86,6 +86,7 @@ const controls = new OrbitControls( camera, renderer.domElement );
 camera.position.z = 6;
 // camera.position.y = 1;
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x3e414f);
 // --------------------resize windows------------------------------
 // function onWindowResize(){
 

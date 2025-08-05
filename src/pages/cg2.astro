@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "3D 角色展示";
+import Threejs from '@components/Threejs.astro';
+import Whitebox from '@components/whitebox.astro';
+import Whiteboxvideo from '@components/whitebox-video.astro';
+// import Textbox from '@components/Textbox.astro';
+import "@styles/background1cg.css";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <!-- <Textbox t1={'3D 角色展示'} t2={'3D 角色設計、建模'}/> -->
+	<p>3D NPR style anime character showcase. <br/>LMB-drag to tumble<br/> CTRL-LMB-drag to pan<br/> MMB-drag to zoom</p>
+	<Threejs />
+	<Whiteboxvideo videoPath="/predator/anim3.mp4" t3={'I lose the shading and lineart when using Three.js. There are also some distortions in the texture when you zoom in really close, because it got messed up after baking. This is how it actually looks in Blender eevee (Goo-engine).'}/>
+	<Whitebox imagePath="/src/images/3dchar-old.png"t3={'正面和側面的參考 (by me)，最好還要有背面和物件，像包包、衣服等，也可加上表情包'}/>
+<!-- <div class="inline-block"> -->
+  <!-- <h1>其他作品</h1> -->
+<!-- </div> -->
+</BaseLayout>
