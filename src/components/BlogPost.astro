@@ -1,4 +1,4 @@
 ---
 const {pubDate, title, url } = Astro.props;
 ---
-<li><a href={url}>{pubDate.toISOString().slice(0,10)}&nbsp &nbsp &nbsp{title}</a></li>
+<li class="m-2"><a href={url}>{pubDate.toISOString().slice(0,10)}&nbsp &nbsp &nbsp{title}</a></li>

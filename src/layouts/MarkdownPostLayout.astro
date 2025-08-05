@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import "@styles/background3cg.css";
 const { frontmatter } = Astro.props;
 import { getCollection } from "astro:content";
 import BlogPost from '@components/BlogPost.astro';
@@ -8,7 +9,7 @@ import{formatBlogPosts} from "@scripts/orderposts";
 const formattedPosts = formatBlogPosts(allPosts);
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-<div class="bg-yellow-50 text-black rounded-xl p-5 mt-3 mb-3">
+<div class="bg-yellow-50 text-black p-5 mt-3 mb-3">
   <h1>{frontmatter.title}</h1>
   <h5>{frontmatter.pubDate.toString().slice(0,10)}</h5>
   <!-- <p><em>{frontmatter.description}</em></p> -->
@@ -23,7 +24,7 @@ const formattedPosts = formatBlogPosts(allPosts);
   <div class="border-b-2 border-gray-300 mb-5"></div>
   <slot/>
 </div>
-  <ul>
+  <ul class="overflow-hidden bg-white/50 backdrop-blur-sm text-black">
     <!-- {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)} -->
          <!-- {allPosts.map((post) => (<BlogPost url={`/predator/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate}/>))} -->
     {formattedPosts.map((post) => (<BlogPost url={`/predator/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate}/>))}

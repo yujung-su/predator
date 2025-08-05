@@ -1,27 +1,16 @@
 ---
 # layout: ../../layouts/MarkdownPostLayout.astro
-title: '學習Houdini'
-pubDate: 2025-03-64
-description: '學習Houdini'
+title: '學Live2D和做一些音樂'
+pubDate: 2025-01-30
+description: '新學Live2D和做一些音樂'
 author: '蘇昱融'
 image:
-    url: '/predator/Houdini3D.png'
+    url: '/predator/me.png'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["3d"]
-draft: true
-
+tags: ["life"]
+draft: false
 ---
-## 用數學做藝術 - Houdini
 
-大家可能聽過 Blender、3D MAX、C4D 和 Maya，但是很少人知道 Houdini，可能是因為 Houdini 這個軟體很少人會用，也很難學。Houdini 是一個3d創作平台，強項在程序化(proceduralism)和特效。但是一切要從我接觸 3D 軟體說起。
+一月過得真快，學了很多東西，不過也有了接下來的打算。過年時間準備做 Live2D ，現在趕快畫一張2D的圖，要分層。另外我也想要玩一些電音合成器，訓練我的耳朵和練習混音，我發現我對人聲的掌握還不夠好，常常高頻低頻會太多，中頻很爛沒空間感。有可能是因為我小時候有瘋狂練過鋼琴和小提琴，所以我耳朵已經下意識適應了這兩種樂器。碰到合成器反而會不知所措，但是我要多練習，多參考專業的音樂，想辦法克服弱點。
 
-我的3D軟體的學習要從在德國的時間說起。2022年，我離開的前一年，碩士已經快讀完，剩下很多時間我開始學Blender。
-我記得我也跟大多數人是從 Blender Guru 的甜甜圈開始，然後是Blender Guru 的椅子和沙發。
-之後陸續完成了很多作品，這要感謝網路上 Blender community 和 Youtube, Stack Exchange 等資源。我發現我很會用 Geometry Nodes
-，可能是因為我是讀物理的吧!
-
-最近我決定嘗試 Houdini 是因為 Blender 在操控 Attribute 很不方便，又看到 Youtube 有人做出很酷的 Motion Design 動畫，居然需要用到 divergence (散度)。想說這些厲害的藝術家也需要讀數學，真佩服。因為我常接觸物理和數學的概念，也不會怕程式碼和數學，所以我覺得我應該很適合學Houdini。
-
-其實有了對 3D 背後的原理的了解，在 Houdini 操控 Attribute 非常直觀，比如說要給每一個點一個溫度的值，再用這個值來改變 shader 顏色，反而是在建模和動畫 Houdini 相對難用。Houdini 在程序化也很強大，要臨時改一個參數，像是 3D 樓房的窗戶形式，回去 node 源頭改就好了，不需要打掉重做。
-
-我剛剛花了3萬買了Houdini Indie 2年的使用期限，所以要趕快學會。我之前已經用試用版完成了最基本的教學課程，結果我也需要辛苦掙扎。如果你對 Blender 的 Geometry Nodes 有恐懼，那想像一下 Houdini 全部都是連來連去的 Node ，就算是我也需要適應一陣子。
+**我的音樂喜好**: 我其實喜歡聽西方流行音樂和饒舌，可是台灣的歌手我認識沒幾個，因為我覺得中文聲音限制太多，不像日文聲調很自由。西方的音樂也比較多元有創意，我覺得台灣的音樂太著重人聲，比較沒有新鮮感。不過台灣的混音師相對在人聲的處理也相對很強。

@@ -3,23 +3,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "VFX - 特效";
 import Whitebox from '@components/whitebox.astro';
 import Whiteboxvideo from '@components/whitebox-video.astro';
-import Textbox2 from '@components/Textbox2.astro';
+import Textbox from '@components/Textbox.astro';
 import { Image } from 'astro:assets';
 import mushroom from 'src/images/mushroomstatic3-small.png';
 import watch from 'src/images/watch4-scene1bright.0016.png';
 // import cells1 from 'src/images/newlook.png';
-import patticle1 from 'src/images/smolesingle.png';
+// import patticle1 from 'src/images/smolesingle.png';
 import skull from 'src/images/render3.png';
 import fractal from 'src/images/highres.png';
 import blackhole from 'src/images/bh2.png';
-import vtuberr from 'src/images/girl2-beforesplit.png';
+// import vtuberr from 'src/images/girl2-beforesplit.png';
 import anime1 from 'src/images/2023-26-3.png';
 import anime2 from 'src/images/2023-1.png';
-import "@styles/background3cg.css";
+import "@styles/background1cg.css";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <Textbox2 t1={'VFX - 特效'} t2={'I am aiming to become a VFX generalist. I also do simple animations like product animations in TV and youtube, as well as some VFX effects for games and movies.Blender and Hudini is my main tool but I am also learning Nuke, Maya, Substance Painter and Mari.'}/>
+  <Textbox t1={'VFX - 特效'} t2={'I am aiming to become a VFX generalist. I also do simple animations like product animations in TV, as well as some VFX effects for games and movies. Blender and Hudini are my main tools but I am also learning Nuke, Maya, Substance Painter and Mari.'}/>
 	<!-- <p>VFX demonstration reel</p> -->
 	<div class="overflow-hidden">
 		<iframe class="aspect-video md:min-w-[720px] md:max-w-2xl mt-12 mb-8 min-w-[480px]"
@@ -45,14 +45,14 @@ import "@styles/background3cg.css";
 }/>
 	<Whiteboxvideo videoPath="/predator/web-visualizer1.mp4" t1={'Music Visualizer 音樂視覺效果'
 }/>
-	<Whitebox imagePath="/src/images/protein-render6-3.png" t1={'科研雜誌設計、商品期刊DM圖'}/>
-	<p>Houdini VEX VOP 教學: 雪的成長</p>
+	<Whitebox imagePath="/src/images/protein-render6-3.png" t1={'科研雜誌期刊設計'}/>
+	<p>Houdini 教學: 雪的成長</p>
 	<div class="overflow-hidden">
 		<iframe class="aspect-video md:min-w-[720px] md:max-w-2xl mt-12 mb-8 min-w-[480px]"
 		src="https://www.youtube.com/embed/tS2Z-WIUj3k">
 		</iframe>
   </div>
-<!-- overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-2xl mt-6 mb-8 bg-white/10 backdrop-blur-sm -->
+<!-- overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-2xl mt-6 mb-8 bg-white/10 backdrop-blur-sm class="text-black text-shadow-sm text-shadow-white/50"-->
 <div class="inline-block">
 <h1>技術</h1>
 <div class="overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-2xl mt-6 mb-8 bg-white/10 backdrop-blur-sm">
@@ -61,6 +61,7 @@ import "@styles/background3cg.css";
     <th class="w-30"></th>
     <th><img src="/predator/blender.svg" alt="ladvanced" class="size-[40px]" title="Blender"/>Blender</th>
     <th><img src="/predator/Houdini3D.png" alt="ladvanced" class="size-[40px]" title="Houdini"/>Houdini </th>
+    <th><img src="/predator/maya.jpg" alt="ladvanced" class="size-[40px]" title="Maya"/>Maya</th>
     <td class="text-xs md:block md:w-30 text-center pt-3">
       <img src="/predator/check-rr.png" alt="icon" class="size-[20px] timg"/>no experience
       <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>beginner
@@ -74,12 +75,18 @@ import "@styles/background3cg.css";
       <img src="/predator/check-g.png" alt="icon" class="size-[20px] timg"/>
     </td>
     <td class="text-center w-30">
+      <img src="/predator/check-g.png" alt="icon" class="size-[20px] timg"/>
+    </td>
+    <td class="text-center w-30">
       <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
     </td>
     <td></td>
   </tr>
   <tr>
     <td class="text-center w-30">動畫</td>
+    <td class="text-center w-30">
+      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
+    </td>
     <td class="text-center w-30">
       <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
     </td>
@@ -96,18 +103,25 @@ import "@styles/background3cg.css";
     <td class="text-center w-30">
       <img src="/predator/check-g.png" alt="icon" class="size-[20px] timg"/>
     </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td class="text-center">後製comp</td>
-    <td class="text-center w-30">
-      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
-    </td>
     <td class="text-center w-30">
       <img src="/predator/check-rr.png" alt="icon" class="size-[20px] timg"/>
     </td>
     <td></td>
   </tr>
+  <tr>
+    <td class="text-center">合成渲染</td>
+    <td class="text-center w-30">
+      <img src="/predator/check-g.png" alt="icon" class="size-[20px] timg"/>
+    </td>
+    <td class="text-center w-30">
+      <img src="/predator/check-g.png" alt="icon" class="size-[20px] timg"/>
+    </td>
+    <td class="text-center w-30">
+      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
+    </td>
+    <td></td>
+  </tr>
+
   <tr>
     <td style="border-bottom:3px solid black" colspan="100%"></td>
   </tr>
@@ -123,6 +137,12 @@ import "@styles/background3cg.css";
       <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
     </td>
   </tr>
+  <!-- <tr>
+    <td class="text-center">Gaea</td>
+    <td class="text-center w-30">
+      <img src="/predator/check-y.png" alt="icon" class="size-[20px] timg"/>
+    </td>
+  </tr> -->
 </table>
 </div>
 </div>
@@ -136,11 +156,11 @@ import "@styles/background3cg.css";
     <Image class="rounded-lg mt-2 mb-2" src={mushroom} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={watch} alt="A bird sitting on a nest of eggs." />
     <!-- <Image class="rounded-lg mt-2 mb-2" src={cells1} alt="A bird sitting on a nest of eggs." /> -->
-    <Image class="rounded-lg mt-2 mb-2" src={patticle1} alt="A bird sitting on a nest of eggs." />
+    <!-- <Image class="rounded-lg mt-2 mb-2" src={patticle1} alt="A bird sitting on a nest of eggs." /> -->
     <Image class="rounded-lg mt-2 mb-2" src={skull} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={fractal} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={blackhole} alt="A bird sitting on a nest of eggs." />
-    <Image class="rounded-lg mt-2 mb-2" src={vtuberr} alt="A bird sitting on a nest of eggs." />
+    <!-- <Image class="rounded-lg mt-2 mb-2" src={vtuberr} alt="A bird sitting on a nest of eggs." /> -->
     <Image class="rounded-lg mt-2 mb-2" src={anime1} alt="A bird sitting on a nest of eggs." />
     <Image class="rounded-lg mt-2 mb-2" src={anime2} alt="A bird sitting on a nest of eggs." />
     <video muted loop playsinline autoplay disableRemotePlayback class=" rounded-lg mt-2 mb-2" src="/predator/web-explosion.mp4" type="video/mp4"></video>
