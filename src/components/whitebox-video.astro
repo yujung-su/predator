@@ -13,7 +13,7 @@ const { videoPath, t1, t2, t3, t4} = Astro.props;
 // const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
 if (!videoPath) throw new Error(`"${videoPath}" does not exist in glob: "/predator/src/videos/*.{mp4}"`);
 ---
-<div class="overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-2xl mt-6 mb-8 bg-white 2xl:col-span-1">
+<div class="overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-4xl mt-6 mb-8 bg-white 2xl:col-span-1">
   <div class="md:flex">
     <div class="md:shrink-0 flex justify-center">
       <!-- <Image src={images[imagePath]()} alt="ladvanced" class="size-[250px] object-cover" title="me"/> -->

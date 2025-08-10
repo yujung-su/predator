@@ -1,0 +1,47 @@
+---
+import Navigation from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import "@styles/theme.css";
+import "@styles/global.css";
+// import "@styles/navbar.css";
+// import "@styles/background1cg.css";
+
+const { pageTitle } = Astro.props;
+// import { Image } from 'astro:assets';
+// import localBirdImage from '@images/card-front2.png';
+// import { getUser } from '../scripts/main.js';
+---
+
+<!-- Below is your "component template." It's just HTML, but with
+    some magic sprinkled in to help you build great templates. -->
+	<html lang="en">
+		<head>
+		  <meta charset="utf-8" />
+		  <!-- <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" /> -->
+		  <link rel="icon" href="/src/images/logo-white512.png" />
+		  <meta name="viewport" content="width=device-width" />
+		  <meta name="generator" content={Astro.generator} >
+		  <title>{pageTitle}</title>
+		</head>
+		<body>
+		<!-- ------------------- Navigation item bg-white ---------------- -->
+		<Navigation/>
+
+		<div class="overflow-x-auto">
+			
+         <!-- ---------------------slideshow--------------------- -->
+		</div>
+        <!-- ------------------3D component here------------------ -->
+        <!-- <Threejs /> -->
+
+		  <!-- <div class="bg-[url(/predator/src/images/card-front2.png)] bg-center bg-repeat"></div> -->
+
+
+		  
+		  <div class="justify-center m-auto 2xl:columns-2 2xl:gap-x-24 content-center md:px-24 md:pt-12 md:pb-30 pl-2 overflow:hidden">
+			<!-- <h1 class="pl-4 text-shadow-lg/50 text-shadow-teal-500">{pageTitle}</h1>  -->
+			<slot/>
+		  </div>
+		  <Footer />
+		</body>
+	  </html>

@@ -28,11 +28,14 @@ import "@styles/skillpart.css";
 const pageTitle = "Predator - Home Page";
 ---
 <!-- pageTitle={pageTitle} -->
+<!-- <div class="section-one"></div> -->
+<!-- <div class="empty"></div> -->
 <BaseLayout >
 	<!-- <Threejs /> -->
    <!-- <div class="inline-block"> -->
+    
     <Textbox t2={'歡迎來到我的個人網頁兼工作室網頁'}/>
-    <Whitebox imagePath="/src/images/me.png" t2={'蘇昱融'} t3={'喜歡創作和吸貓'}/>
+    <Whitebox imagePath="/src/images/me.png" t2={'蘇昱融'} t3={'3D 動畫創作者'} t4={'興趣:吸貓和打網球'}/>
     <!-- t1={'創辦人'}  -->
   <!-- </div> -->
   <!-- <div class="inline-block"> -->
@@ -46,6 +49,7 @@ const pageTitle = "Predator - Home Page";
       {skills.map((skill) => <div class="text-white bg-blue-500 rounded-sm p-2 m-2 text-center border-2 border-solid shadow-md shadow-neutral-50">{skill}</div>)}
     -->
   <!-- <div/> -->
+  <div class="h-full"><br/><div/>
   <h1>教育背景</h1>
   <div>
   <EXPERIENCE/>
@@ -71,6 +75,27 @@ const pageTitle = "Predator - Home Page";
     </div>
   </div> -->
 </BaseLayout>
+<style>
+    .section-one {
+        /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('/predator/mtbg.png'); */
+        background-image: url('/predator/mtbg.png');
+        height: 100vh; 
+        top: 0px;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        /* position:absolute; */
+    }
+    .empty {
+        background: transparent;
+        height: 100vh; 
+        top: 0px;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        /* position:absolute; */
+    }
+</style>
 <script>
 import "@scripts/cardd.js";
 </script>

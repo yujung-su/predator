@@ -10,11 +10,21 @@ import "@styles/background1cg.css";
 
 <BaseLayout pageTitle={pageTitle}>
   <!-- <Textbox t1={'3D 角色展示'} t2={'3D 角色設計、建模'}/> -->
-	<p>3D NPR style anime character showcase. <br/>LMB + drag to tumble<br/> CTRL + LMB + drag to pan<br/> MMB + drag to zoom</p>
-	<Threejs />
-	<Whiteboxvideo videoPath="/predator/anim3.mp4" t3={'I lose the shading and lineart when using Three.js. There are also some distortions after baking the texture. This is how it actually looks in Blender eevee (Goo-engine).'}/>
+	<p>3D NPR style anime character showcase. <br/>LMB + drag to tumble<br/> CTRL + LMB + drag to pan<br/> MMB to zoom</p>
+	<div class="max-w-lg md:max-w-4xl mt-6 mb-8 bg-transparent">
+		<Threejs/>
+	</div>
+	
+	<Whiteboxvideo videoPath="/predator/anim3.mp4" t3={'I lost the shading and lineart when using Three.js. There are also some distortions after baking the texture. This is how it actually looks in Blender eevee (Goo-engine).'}/>
 	<Whitebox imagePath="/src/images/3dchar-old.png"t3={'正面和側面的參考 (designed by me)'}/>
 <!-- <div class="inline-block"> -->
   <!-- <h1>其他作品</h1> -->
 <!-- </div> -->
 </BaseLayout>
+<style>
+#container {
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+</style>

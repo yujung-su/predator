@@ -7,7 +7,7 @@ import Textbox2 from '@components/Textbox2.astro';
 // import Threejs from '@components/Threejs.astro';
 import Whiteboxvideo from '@components/whitebox-video.astro';
 ---
-
+<div class="empty"></div>
 <BaseLayout pageTitle={pageTitle}>
 	<Textbox2 t1={'Vtuber 皮 製作'} t2={'I love to draw cute anime girls! I also design vtube models and simple rigging. 我會畫簡單的動漫人物和Chibi卡通人物，也會畫Vtuber與基本Live2D rigging。歡迎與我合作!'}/>
 	
@@ -15,13 +15,24 @@ import Whiteboxvideo from '@components/whitebox-video.astro';
 
 	<Whitebox imagePath="/src/images/2023-26-3.png" t1={'動漫人物設計'} t3={'依客戶需求風格繪製'}/>
 
-    <Whiteboxvideo videoPath="/predator/anim3.mp4" t1={'3D 角色建模'} t3={'目前只提供 Blender 模組。'}/>
+    <Whiteboxvideo videoPath="/predator/anim3.mp4" t1={'3D 角色建模'} t3={'Blender 模組。'}/>
 
 	<!-- <p>Vtuber demonstration reel</p> -->
 	<div class="overflow-hidden">
-		<iframe class="aspect-video md:min-w-[720px] md:max-w-2xl mt-12 mb-8 min-w-[480px]"
+		<iframe class="aspect-video md:min-w-[720px] md:max-w-4xl mt-12 mb-8 min-w-[480px]"
 		src="https://www.youtube.com/embed/BT-RWEDycDg">
 		</iframe>
     </div>
 </BaseLayout>
+<style>
+    .empty {
+        background: transparent;
+        height: 100vh; 
+        top: 0px;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        /* position:absolute; */
+    }
+</style>
  <!-- max-w-lg overflow-hidden rounded-xl bg-white shadow-2xl md:max-w-2xl mt-8 mb-3 -->
