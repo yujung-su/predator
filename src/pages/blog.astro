@@ -4,6 +4,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import "@styles/background1cg.css";
 const pageTitle = "部落格";
 import BlogPost from '@components/BlogPost.astro';
+import Textbox from '@components/Textbox.astro';
 // const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
 const allPosts = await getCollection("blog");
@@ -14,14 +15,17 @@ const formattedPosts = formatBlogPosts(allPosts);
 
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>我的部落格</h1>
+  <Textbox t1={'我的部落格'} t2={'這裡是我舒適的小窩，可以看到我的學習的過程與生活的一點一滴'}/>
+  <!-- <h1 class="text-black">我的部落格</h1>
   <br/>
-  <h2>這裡是我舒適的小窩，可以看到我的學習的過程與生活的一點一滴</h2>
+  <h2 class="text-black">這裡是我舒適的小窩，可以看到我的學習的過程與生活的一點一滴</h2> -->
   <br/>
+  <div class="text-white overflow-hidden rounded-xl shadow-2xl max-w-lg md:max-w-4xl mt-6 mb-8 bg-white/10 backdrop-blur-sm" >
   <ul>
     <!-- {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)} -->
          <!-- {allPosts.map((post) => (<BlogPost url={`/predator/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate}/>))} -->
     {formattedPosts.map((post) => (<BlogPost url={`/predator/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate}/>))}
 
   </ul>
+  </div>
 </BaseLayout>

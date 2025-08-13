@@ -10,7 +10,7 @@ const formattedPosts = formatBlogPosts(allPosts);
 ---
 <BaseLayout pageTitle={frontmatter.title}>
 <div class="bg-yellow-50 text-black p-5 mt-3 mb-3">
-  <h1>{frontmatter.title}</h1>
+  <h1 class="text-base/12">{frontmatter.title}</h1>
   <h5>{frontmatter.pubDate.toString().slice(0,10)}</h5>
   <!-- <p><em>{frontmatter.description}</em></p> -->
   <h5>Written by: {frontmatter.author}</h5>

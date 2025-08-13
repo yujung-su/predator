@@ -7,7 +7,7 @@ author: '蘇昱融'
 image:
     url: '/predator/me.png'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["life"]
+tags: ["life", "music"]
 draft: false
 ---
 
